@@ -25,8 +25,9 @@ export default {
         .callbackHandler.postMessage(userAgent)
     },
     showAlbum: function () {
+      // postMessageの引数をなしにするとネイティブ側でshowAlbumアクションが受け取れない.
       window.webkit.messageHandlers
-        .showAlbum.postMessage('hoge')
+        .showAlbum.postMessage('hoge') 
     }
   },
   data () {
