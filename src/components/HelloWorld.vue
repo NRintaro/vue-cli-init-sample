@@ -14,8 +14,9 @@ export default {
   name: 'HelloWorld',
   methods: {
     passDataToNaitive: function () {
+      let userAgent = window.navigator.userAgent
       window.webkit.messageHandlers
-        .callbackHandler.postMessage('WebViewから呼び出し')
+        .callbackHandler.postMessage(userAgent)
     }
   },
   data () {
